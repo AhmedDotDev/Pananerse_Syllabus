@@ -4,8 +4,9 @@ import LargeWithNewsletter from './components/Footer/footer'
 import CaptionCarousel from './components/Hero/hero'
 import About from './components/About/about'
 import Testinomials from './components/Testinomials/testinomials'
-import BasicStatistics from './components/Feature/feature'
 import SimpleThreeColumns from './components/Feature/feature'
+import BasicStatistics from './components/Serve/serve'
+import BoxCarousel from './components/Course_slider/slider'
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
   <CaptionCarousel></CaptionCarousel>
   <About></About>
   <SimpleThreeColumns></SimpleThreeColumns>
+  <BoxCarousel></BoxCarousel>
+  <BasicStatistics></BasicStatistics>
   <Testinomials></Testinomials>
     <LargeWithNewsletter></LargeWithNewsletter>
     </>
