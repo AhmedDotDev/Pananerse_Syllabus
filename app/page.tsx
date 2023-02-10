@@ -11,7 +11,6 @@ import BoxCarousel from './components/Course_slider/slider'
 export default function Home() {
   return (
     <>
-    <Nav></Nav>
   <CaptionCarousel></CaptionCarousel>
   <About></About>
   <SimpleThreeColumns></SimpleThreeColumns>

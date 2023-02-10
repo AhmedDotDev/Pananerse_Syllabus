@@ -14,6 +14,7 @@ import {
     useColorMode,
     Button,
     Center,
+    Heading,
   } from '@chakra-ui/react';
   import { ReactNode } from 'react';
   import { FcGoogle } from 'react-icons/fc'
@@ -120,7 +121,7 @@ import {
               </Stack>
             </Stack>
             <Stack align={'flex-start'}>
-              <ListHeader>Company</ListHeader>
+             <Heading>Company</Heading>
               <Link href={'#'}>About us</Link>
               <Link href={'#'}>Blog</Link>
               <Link href={'#'}>Contact us</Link>
