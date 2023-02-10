@@ -1,165 +1,134 @@
-import React from 'react';
-import {Poppins } from '@next/font/google'
-
-// If loading a variable font, you don't need to specify the font weight
-const inter = Poppins({
-  subsets: ['latin'],
-  weight: '500' 
-})
-
 import {
-  Box,
-  IconButton,
-  useBreakpointValue,
+  Container,
   Stack,
+  Flex,
+  Box,
   Heading,
   Text,
-  Image,
-  Container,
-  HStack,
   Button,
-  border,
-  color,
+  Image,
+  Icon,
+  IconButton,
+  createIcon,
+  IconProps,
+  useColorModeValue,
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
-// And react-slick as our Carousel Lib
-import Slider from 'react-slick';
-import localFont from '@next/font/local'
+// import { Poppins } from '@next/font/google';
+// const poppins = Poppins({
+//   subsets: ['latin'],
+//   weight: '500' 
+// })
+import Nav from '../Header/header';
+import { useRouter } from "next/navigation";
 
-// Settings for the slider
-const settings = {
-  dots: true,
-  arrows: false,
-  fade: true,
-  infinite: true,
-  autoplay: true,
-  speed: 500,
-  autoplaySpeed: 5000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
-
-export default function CaptionCarousel() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
-  const [slider, setSlider] = React.useState<Slider | null>(null);
-
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
-  const top = useBreakpointValue({ base: '90%', md: '50%' });
-  const side = useBreakpointValue({ base: '30%', md: '40px' });
-
-  // This list contains all the data for carousels
-  // This can be static or loaded from a server
-  const cards = [
-    {
-      title: 'Getting Ready for the Next Generation of the Internet',
-      text:
-        "Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics Technologies ",
-      image:
-        '/Web5.png',
-      },
-    {
-      title: 'Certified Web 3.0 and Metaverse Developer ',
-      text:
-        "A One and Quarter Years Panaverse DAO Earn as you Learn Program   ",
-      image:
-      '/Web4.jpg',
-    },
-  
-  ];
+export default function CallToActionWithVideo() {
+  const router = useRouter();
 
   return (
-    <Box
-      position={'relative'}
-      height={'600px'}
-      width={'full'}
-      overflow={'hidden'}>
 
+    <Container maxW={'6xl'}>
+      <Nav></Nav>
 
-      {/* CSS files for react-slick */}
-      <link
-        rel="stylesheet"
-        type="text/css"
-        charSet="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
-      {/* Left Icon */}
-      <IconButton
-        aria-label="left-arrow"
-        color={'#BC0C29'}
-        _hover={{ bg: 'transparent' , color:'white' }}
-        variant="ghost"
-        position="absolute"
-        left={side}
-        top={top}
-        transform={'translate(0%, -50%)'}
-        zIndex={2}
-        onClick={() => slider?.slickPrev()}>
-        <BiLeftArrowAlt size="40px" />
-      </IconButton>
-      {/* Right Icon */}
-      <IconButton
-        aria-label="right-arrow"
-        _hover={{ bg: 'transparent' , color:'white' }}
-        color={'#BC0C29'}
-        variant="ghost"
-        position="absolute"
-        right={side}
-        top={top}
-        transform={'translate(0%, -50%)'}
-        zIndex={2}
-        onClick={() => slider?.slickNext()}>
-        <BiRightArrowAlt size="40px" />
-      </IconButton>
-      {/* Slider */}
-      <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        {cards.map((card, index) => (
-          <Box
-            key={index}
-            height={'xl'}
-            position="relative"
-            backgroundPosition="center"
-            backgroundRepeat="no-repeat"
-            backgroundSize="cover"
-            backgroundImage={`url(${card.image})`}>
-            {/* This is the block you need to change, to customize the caption */}
-            <Container size="container.lg" height="600px" position="relative" mr="700px">
-              <Stack 
-                spacing={12}
-                w={'full'}
-                maxW={'lg'}
-                position="absolute"
-                top="50%"
-                transform="translate(0, -50%)">
-                <Heading  fontFamily={'mono'} fontSize={{ base: '3xl', md: '4xl', lg: '4xl' }} color="White">
-                  {card.title}
-                </Heading>
-                <Text className={inter.className} fontSize={{ base: 'md', lg: 'lg' }} color="White">
-                  {card.text}
-                </Text>
-                <HStack>
-                <Button
-              bg={'#BC0C29'}
-              key={index}
-              className={inter.className} fontWeight={200}
-              rounded={'full'}
+      <Stack
+        align={'center'}
+        spacing={{ base: 8, md: 10 }}
+        py={{ base: 20, md: 28 }}
+        direction={{ base: 'column', md: 'row' }}>
+        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Heading
+            lineHeight={1.1}
+            fontWeight={900}
+            fontSize={{ base: '2xl', sm: '3xl', lg: '4xl' }}>
+            <Text
+            fontFamily="Poppins"
               color={'white'}
-              _hover={{ bg: 'gray.200' , color:'black' }}>
-              Show me more
-            </Button>
-                </HStack>
-              </Stack>
-            </Container>
+              as={'span'}
+              position={'relative'}
+              _after={{
+                content: "''",
+                width: 'full',
+                height: '80%',
+
+                position: 'absolute',
+                bottom: 1,
+                left: 0,
+                bg: '#ba0d29',
+                zIndex: -1,
+              }}>
+              Getting Ready for &nbsp; </Text>
+            <br />
+            <Text as={'span'} color={'#000'}>
+              the Next Generation of the Internet   </Text>
+          </Heading>
+          <Text             fontFamily="Poppins"
+ fontWeight={200}
+            color={'gray.800'} >
+            Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics Technologies
+          </Text>
+          <Button
+            bg={'#BC0C29'}
+            maxW={'fit-content'}
+            fontWeight={200}
+            rounded={'full'}
+            color={'white'}
+            onClick={() => router.push('./courses')}
+            _hover={{ bg: 'gray.200', color: 'black' }}>
+
+            Explore Courses
+          </Button>
+        </Stack>
+        <Flex
+          flex={1}
+          justify={'center'}
+          align={'center'}
+          position={'relative'}
+          w={'full'}>
+          <Blob
+            w={'150%'}
+            h={'150%'}
+            position={'absolute'}
+            top={'-20%'}
+            left={0}
+            zIndex={-1}
+            color={useColorModeValue('red.800', 'red.400')}
+          />
+          <Box
+            position={'relative'}
+            height={'310px'}
+            rounded={'2xl'}
+            boxShadow={'2xl'}
+            width={'full'}
+            overflow={'hidden'}>
+
+            <iframe width={'100%'} height={'100%'} aria-controls="0" src="https://www.youtube-nocookie.com/embed/fKhY3mu8hx4" title="YouTube video player" frameBorder={'0'} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           </Box>
-        ))}
-      </Slider>
-    </Box>
+        </Flex>
+      </Stack>
+    </Container >
   );
 }
+
+const PlayIcon = createIcon({
+  displayName: 'PlayIcon',
+  viewBox: '0 0 58 58',
+  d:
+    'M28.9999 0.562988C13.3196 0.562988 0.562378 13.3202 0.562378 29.0005C0.562378 44.6808 13.3196 57.438 28.9999 57.438C44.6801 57.438 57.4374 44.6808 57.4374 29.0005C57.4374 13.3202 44.6801 0.562988 28.9999 0.562988ZM39.2223 30.272L23.5749 39.7247C23.3506 39.8591 23.0946 39.9314 22.8332 39.9342C22.5717 39.9369 22.3142 39.8701 22.0871 39.7406C21.86 39.611 21.6715 39.4234 21.5408 39.1969C21.4102 38.9705 21.3421 38.7133 21.3436 38.4519V19.5491C21.3421 19.2877 21.4102 19.0305 21.5408 18.8041C21.6715 18.5776 21.86 18.3899 22.0871 18.2604C22.3142 18.1308 22.5717 18.064 22.8332 18.0668C23.0946 18.0696 23.3506 18.1419 23.5749 18.2763L39.2223 27.729C39.4404 27.8619 39.6207 28.0486 39.7458 28.2713C39.8709 28.494 39.9366 28.7451 39.9366 29.0005C39.9366 29.2559 39.8709 29.507 39.7458 29.7297C39.6207 29.9523 39.4404 30.1391 39.2223 30.272Z',
+});
+
+export const Blob = (props: IconProps) => {
+  return (
+    <Icon
+      width={'100%'}
+      viewBox="0 0 578 440"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}>
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M239.184 439.443c-55.13-5.419-110.241-21.365-151.074-58.767C42.307 338.722-7.478 282.729.938 221.217c8.433-61.644 78.896-91.048 126.871-130.712 34.337-28.388 70.198-51.348 112.004-66.78C282.34 8.024 325.382-3.369 370.518.904c54.019 5.115 112.774 10.886 150.881 49.482 39.916 40.427 49.421 100.753 53.385 157.402 4.13 59.015 11.255 128.44-30.444 170.44-41.383 41.683-111.6 19.106-169.213 30.663-46.68 9.364-88.56 35.21-135.943 30.551z"
+        fill="currentColor"
+      />
+    </Icon>
+  );
+};

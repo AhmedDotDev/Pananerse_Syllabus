@@ -2,10 +2,16 @@
 import { ReactElement } from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex,useColorModeValue, chakra, Heading, Container, Image } from '@chakra-ui/react';
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
-import localFont from '@next/font/local'
+// import localFont from '@next/font/local'
 import Link from 'next/link';
-const MartianMono = localFont({ src: '../../../public/fonts/martianmono.ttf' , weight:'400'})
+// const MartianMono = localFont({ src: '../../../public/fonts/martianmono.ttf' , weight:'400'})
+import {Poppins } from '@next/font/google'
 
+// If loading a variable font, you don't need to specify the font weight
+const poopins = Poppins({
+  subsets: ['latin'],
+  weight: '500' 
+})
 interface FeatureProps {
   title: string;
   text: string;
@@ -30,9 +36,9 @@ const Feature = ({ title, text, icon , learn}: FeatureProps) => {
         mb={1}>
         {icon}
       </Flex>
-      <Text className={MartianMono.className} color={useColorModeValue('gray.100', 'gray.300')}  fontWeight={800}>{title}</Text>
+      <Text  color={useColorModeValue('gray.100', 'gray.300')}  fontWeight={800}>{title}</Text>
       <Text color={useColorModeValue('gray.200', 'gray.300')}>{text}</Text>
-      <Text className={MartianMono.className} color={useColorModeValue('gray.100', 'gray.300')} fontSize={'12px'}  fontWeight={800}> <Link href={learn} >Learn More →</Link></Text> 
+      <Text className={poopins.className} color={useColorModeValue('gray.100', 'gray.300')} fontSize={'12px'}  fontWeight={800}> <Link href={learn} >Learn More →</Link></Text> 
 
     </Stack>
   );

@@ -4,9 +4,9 @@ import {
     Box,
     Flex,
     Avatar,
-    Link,
     Button,
     Menu,
+    Link,
     MenuButton,
     MenuList,
     MenuItem,
@@ -23,11 +23,13 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { BackgroundChanger } from '../Colors/themechanger';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import NextLink from 'next/link';
 
 const Links = ['Home', 'About', 'Courses', 'Instructors', 'Contact'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
     <Link
+    as={NextLink}
         px={2}
         py={1}
         rounded={'md'}
@@ -35,7 +37,8 @@ const NavLink = ({ children }: { children: ReactNode }) => (
             textDecoration: 'none',
             bg: useColorModeValue('gray.200', 'gray.700'),
         }}
-        href={'#'}>
+        href='./'
+        >
         {children}
     </Link>
 );
@@ -45,7 +48,7 @@ export default function Nav() {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
         <>
-            <Box bg={BackgroundChanger()} px={4}>
+            <Box bg={/*BackgroundChanger()*/ 'transparent'} px={4}>
                 <Flex h={'90px'} alignItems={'center'} justifyContent={'space-between'}>
                     <IconButton
                         size={'md'}
