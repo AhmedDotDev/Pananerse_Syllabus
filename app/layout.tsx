@@ -2,7 +2,7 @@
 import ChakraWrapper from './components/chakra/chakraprovider'
 import './globals.css'
 import { ColorModeScript, theme } from '@chakra-ui/react'
-import '../public/fonts/Poppins-Regular.ttf'
+// import '../public/fonts/Poppins-Regular.ttf'
 
 export default function RootLayout({
   children,
