@@ -3,10 +3,9 @@ import Nav from './components/Header/header'
 import LargeWithNewsletter from './components/Footer/footer'
 import CaptionCarousel from './components/Hero/hero'
 import About from './components/About/about'
-import Testinomials from './components/Testinomials/testinomials'
 import SimpleThreeColumns from './components/Feature/feature'
 import BasicStatistics from './components/Serve/serve'
-import BoxCarousel from './components/Course_slider/slider'
+import Oper_Cities from './components/Oper_Cities/oper-cities'
 
 export default function Home() {
   return (
@@ -14,9 +13,8 @@ export default function Home() {
   <CaptionCarousel></CaptionCarousel>
   <About></About>
   <SimpleThreeColumns></SimpleThreeColumns>
-  <BoxCarousel></BoxCarousel>
   <BasicStatistics></BasicStatistics>
-  <Testinomials></Testinomials>
+  <Oper_Cities></Oper_Cities>
     <LargeWithNewsletter></LargeWithNewsletter>
     </>
     

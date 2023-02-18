@@ -26,7 +26,7 @@ export default function CallToActionWithVideo() {
 
   return (
 
-    <Container maxW={'6xl'}>
+    <Container maxW={'100%'}>
       <Nav></Nav>
 
       <Stack

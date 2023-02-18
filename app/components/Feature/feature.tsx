@@ -2,7 +2,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { ReactElement } from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex,useColorModeValue, chakra, Heading,Button, Container, Image } from '@chakra-ui/react';
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
 import Link from 'next/link';
 interface FeatureProps {
   title: string;
@@ -37,20 +36,9 @@ const Feature = ({ title, text, icon , learn}: FeatureProps) => {
 };
 
 export default function SimpleThreeColumns() {
-  // const boxRef = useRef(null);
-
-  // useEffect(() => {
-  //   const box : any = boxRef.current;
-  //   box.style.transform = "translateY(-50px)";
-  //   box.style.opacity = 0;
-  //   setTimeout(() => {
-  //     box.style.transform = "translateY(0)";
-  //     box.style.opacity = 1;
-  //   }, 500);
-  // }, []);
   return (
     <>
-    <Container marginTop={20} marginBottom={20} maxW={'6xl'} py={12}>
+    <Container marginTop={20} marginBottom={20} maxW={'100%'} py={12}>
       <Heading textAlign={'center'} paddingBottom={20} fontSize={{ base: '3xl', md: '4xl', lg: '4xl' }}>Common Courses</Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
       <Box
@@ -95,6 +83,7 @@ export default function SimpleThreeColumns() {
           learn='../Core/quater3'
 
         />
+        
         </Box>
       </SimpleGrid>
     </Container>
