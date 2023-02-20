@@ -51,7 +51,7 @@ import router from 'next/router';
               color={'#BC0C29'}
               fontWeight={600}
               fontSize={'sm'}
-              bg={useColorModeValue('#f2c4cc', 'gray.300')}
+              bg={useColorModeValue('#f2c4cc', '#f2c4cc')}
               p={2}
               alignSelf={'flex-start'}
               rounded={'md'}>

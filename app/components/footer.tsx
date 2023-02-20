@@ -121,7 +121,7 @@ import {
               </Stack>
             </Stack>
             <Stack align={'flex-start'}>
-             <Heading>Company</Heading>
+             <ListHeader>Company</ListHeader>
               <Link href={'#'}>About us</Link>
               <Link href={'#'}>Blog</Link>
               <Link href={'#'}>Contact us</Link>

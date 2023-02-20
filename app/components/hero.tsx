@@ -18,8 +18,9 @@ import {
 //   subsets: ['latin'],
 //   weight: '500' 
 // })
-import Nav from '../Header/header';
+import Nav from './header';
 import { useRouter } from "next/navigation";
+import { BackgroundChanger, headingColorChanger, paraColorChanger } from './Colors/themechanger';
 
 export default function CallToActionWithVideo() {
   const router = useRouter();
@@ -40,6 +41,11 @@ export default function CallToActionWithVideo() {
             fontWeight={900}
             fontSize={{ base: '2xl', sm: '3xl', lg: '4xl' }}>
             <Text
+            
+pt="2"
+pb="2"
+pl="2"            
+
             fontFamily="Poppins"
               color={'white'}
               as={'span'}
@@ -48,21 +54,22 @@ export default function CallToActionWithVideo() {
                 content: "''",
                 width: 'full',
                 height: '80%',
+                
 
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
-                bg: '#ba0d29',
+                bg: '#ae1028',
                 zIndex: -1,
               }}>
               Getting Ready for &nbsp; </Text>
             <br />
-            <Text as={'span'} color={'#000'}>
+            <Text  as={'span'} color={useColorModeValue('gray.900','gray.200')}>
               the Next Generation of the Internet   </Text>
           </Heading>
-          <Text             fontFamily="Poppins"
+          <Text fontFamily="Poppins"
  fontWeight={200}
-            color={'gray.800'} >
+            color={useColorModeValue('gray.900','white')} >
             Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics Technologies
           </Text>
           <Button
@@ -90,7 +97,7 @@ export default function CallToActionWithVideo() {
             top={'-20%'}
             left={0}
             zIndex={-1}
-            color={useColorModeValue('red.800', 'red.400')}
+            color={useColorModeValue("#ae1028","red.900")}
           />
           <Box
             position={'relative'}

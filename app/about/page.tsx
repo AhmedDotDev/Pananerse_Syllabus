@@ -1,8 +1,8 @@
 'use client'
 
-import About from "../components/About/about"
-import LargeWithNewsletter from "../components/Footer/footer"
-import Nav from "../components/Header/header"
+import About from "../components/about"
+import LargeWithNewsletter from "../components/footer"
+import Nav from "../components/header"
 
 
 export default function AboutUs() {

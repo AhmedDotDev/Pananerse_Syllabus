@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { ReactElement } from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex,useColorModeValue, chakra, Heading,Button, Container, Image } from '@chakra-ui/react';
 import Link from 'next/link';
+import { BackgroundChanger } from "./Colors/themechanger";
 interface FeatureProps {
   title: string;
   text: string;
@@ -39,11 +40,11 @@ export default function SimpleThreeColumns() {
   return (
     <>
     <Container marginTop={20} marginBottom={20} maxW={'100%'} py={12} px={12}>
-      <Heading textAlign={'center'} paddingBottom={20} fontSize={{ base: '3xl', md: '4xl', lg: '4xl' }}>Common Courses</Heading>
+      <Heading textAlign={'center'} paddingBottom={20} fontSize={{ base: '3xl', md: '4xl', lg: '4xl' }}>Core Courses</Heading>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
       <Box
       //  ref={boxRef}
-      bg={useColorModeValue('#BC0C29', '#BC0C29') }
+      bg={BackgroundChanger()}
  padding={10} borderRadius={50} _hover={{ transform: "scale(1.1)", boxShadow: "0px 0px 10px #BC0C29" }}
  transition="all 0.2s">
         <Feature
@@ -56,7 +57,7 @@ export default function SimpleThreeColumns() {
         </Box>
         <Box
         //  ref={boxRef}
-         bg={useColorModeValue('#BC0C29', '#BC0C29') }
+        bg={BackgroundChanger()}
  padding={10} borderRadius={50} _hover={{ transform: "scale(1.1)", boxShadow: "0px 0px 10px #BC0C29" }}
  transition="all 0.2s">
         <Feature
@@ -71,7 +72,7 @@ export default function SimpleThreeColumns() {
         </Box>
         <Box
         //  ref={boxRef}
-          bg={useColorModeValue('#BC0C29', '#BC0C29 ') }
+        bg={BackgroundChanger()}
  padding={10} borderRadius={50} _hover={{ transform: "scale(1.1)", boxShadow: "0px 0px 10px #BC0C29" }}
  transition="all 0.2s">
         <Feature

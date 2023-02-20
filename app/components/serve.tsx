@@ -7,6 +7,7 @@ import {
     StatNumber,
     useColorModeValue,
   } from '@chakra-ui/react';
+import { BackgroundChanger } from './Colors/themechanger';
   
   interface StatsCardProps {
     title: string;
@@ -16,13 +17,15 @@ import {
     const { title, stat } = props;
     return (
       <Stat
-        bg={'#BC0C29    '}
+      bg={BackgroundChanger()}
+      _hover={{boxShadow: "0px 0px 10px #BC0C29" }}
+      transition="all 0.1s"
         px={{ base: 4, md: 8 }}
         py={'5'}
         color={'white'}
         shadow={'xl'}
         border={'1px solid'}
-        borderColor={useColorModeValue('gray.800', 'gray.500')}
+        borderColor={useColorModeValue('gray.400', 'gray.500')}
         rounded={'lg'}>
         <StatLabel fontWeight={'medium'} isTruncated>
           {title}
@@ -36,7 +39,7 @@ import {
   
   export default function BasicStatistics() {
     return (
-      <Box maxW="7xl" mx={'auto'} pt={5} pb={75} px={{ base: 2, sm: 12, md: 17 }}>
+      <Box maxW="7xl" mx={'auto'} pt={5} pb={75} px={"12"}>
         <chakra.h1
           textAlign={'center'}
           fontSize={'4xl'}
@@ -45,9 +48,9 @@ import {
           What is our company doing?
         </chakra.h1>
         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }}>
-          <StatsCard title={'We serve'} stat={'50,000 people'} />
-          <StatsCard title={'In'} stat={'30 different countries'} />
-          <StatsCard title={'Who speak'} stat={'100 different languages'} />
+          <StatsCard title={'We have'} stat={'trained 50k+ people'} />
+          <StatsCard title={'From'} stat={'20 cities & countries'} />
+          <StatsCard title={'Who have'} stat={'earned $100k+ '} />
         </SimpleGrid>
       </Box>
     );

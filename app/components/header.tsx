@@ -21,7 +21,7 @@ import {
   IconButton,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { BackgroundChanger } from '../Colors/themechanger';
+import { BackgroundChanger } from './Colors/themechanger';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 

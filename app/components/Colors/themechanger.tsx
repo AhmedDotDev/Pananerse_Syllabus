@@ -2,11 +2,13 @@ import { useColorModeValue } from "@chakra-ui/react"
 import React from 'react'
 
 export function BackgroundChanger () {
-    const backgroundColor = useColorModeValue("white", "gray.900");
+    const backgroundColor = useColorModeValue("#ae1028", "gray.900");
     return backgroundColor;
 }
-export function ColorChanger () {
-    const colorchanger = useColorModeValue('gray.800','white' );    return colorchanger;
+export function headingColorChanger () {
+    const colorchanger = useColorModeValue('white','gray.200' );    return colorchanger;
 }
-
+export function paraColorChanger () {
+    const colorchanger = useColorModeValue('gray.100','gray.200' );     return colorchanger;
+}
  
