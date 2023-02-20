@@ -12,14 +12,14 @@ interface Props {
 
 const Opr = ({ imgSrc, title, location, timing}: Props) => {
   return (
-    <Box mt={5} mb={5} bg={useColorModeValue('white','#1A202C')} borderRadius={30} w={{base:'100%',md:'100%',lg:'600px'}} display="flex" alignItems="center">
+    <Box mt={5} mb={5} bg={useColorModeValue('gray.200','gray.700')} borderRadius={30} h={160} w={{base:'100%',md:'100%',lg:'600px'}} display="flex" alignItems="center">
       <Image
         src={imgSrc}
         borderTopLeftRadius={30}
         borderBottomLeftRadius={30}
         // rounded="lg"
         width="200px"
-        height="200px"
+        height="160px"
         objectFit="cover"
         mr={5}
       />
@@ -36,7 +36,7 @@ const Opr = ({ imgSrc, title, location, timing}: Props) => {
 export default function Oper_Cities() {
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.700')}>
+      <Box py={20} paddingRight={7}>
         <chakra.h1
           textAlign={'center'}
           fontSize={'4xl'}
@@ -45,8 +45,8 @@ export default function Oper_Cities() {
           Operational Cities
         </chakra.h1>
         <SimpleGrid columns={[1, null, 2]}>
-          <Box mt={35}>
-          <Image display={'block'} maxWidth={'100%'} h={'800px'} src='./pakistanMap.png' />
+          <Box mt={105} px={8}>
+          <Image display={'block'} maxWidth={'100%'} src='./pakistanMap.png' />
           </Box>
         <Box>
           <Opr
