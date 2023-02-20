@@ -25,10 +25,10 @@ export default function CallToActionWithVideo() {
   const router = useRouter();
 
   return (
-
-    <Container maxW={'100%'}>
+<>
+    
       <Nav></Nav>
-
+      <Container maxW={'100%'} px={12}>
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -105,7 +105,7 @@ export default function CallToActionWithVideo() {
         </Flex>
       </Stack>
     </Container >
-  );
+  </>);
 }
 
 const PlayIcon = createIcon({

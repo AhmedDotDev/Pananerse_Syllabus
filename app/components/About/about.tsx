@@ -43,7 +43,7 @@ import router from 'next/router';
   
   export default function About() {
     return (
-      <Container marginTop={20} maxW={'100%'} py={12}>
+      <Container marginTop={20} maxW={'100%'} py={12} px={12}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={4}>
             <Text
