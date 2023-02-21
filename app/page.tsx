@@ -13,7 +13,6 @@ export default function Home() {
     <>
   <CaptionCarousel></CaptionCarousel>
   <About></About>
- 
   <SimpleThreeColumns></SimpleThreeColumns>
   <Example></Example>
   <BasicStatistics></BasicStatistics>
