@@ -33,7 +33,7 @@ coursetitle:string
           >
           <Stack pl={[5,10,20]} w={[300, 400, 500]} align={'flex-start'}>
            <Box margin={'auto'} float={"right"}><Heading textAlign={'center'} float={"right"} fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} color={headingColorChanger()}>{coursetitle}</Heading>
-           <Text color={"white"} pt={20}><Link href={'../'}>Home</Link> &gt; About</Text></Box> 
+           <Text color={'white'} pt={20}><Link href={'../'}>Home</Link> &gt; Contact</Text></Box> 
           </Stack>
         </VStack>
         < Box maxW={"800"}><Image mt={"20"} ml={20} src="../about.png"/></Box>

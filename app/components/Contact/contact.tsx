@@ -14,7 +14,7 @@ import {
     Textarea,
     Tooltip,
     useClipboard,
-    useColorModeValue,
+    useColorModeValue,Image,
     VStack,
   } from '@chakra-ui/react';
   import React from 'react';
@@ -29,8 +29,15 @@ import {
     const { hasCopied, onCopy } = useClipboard('example@example.com');
   
     return (
-      <Flex
-        bg={useColorModeValue('ffffff', 'gray.900')}
+    <>
+ <Heading textAlign={'center'} paddingTop={'45px'} fontSize={{ base: '3xl', md: '4xl', lg: '4xl' }}>Contact Panaverse</Heading>
+      <Stack direction={['column', 'row']} spacing='24px' px={"12"} py="20">
+      <Box mt={20} w={["100%","100%","50%" ]}>
+    <Image src='./contact.png'/>
+  </Box>
+<Box w={["100%","100%","50%" ]}>
+      <Flex borderRadius={20}
+        bg={useColorModeValue('gray.200', 'gray.900')}
         align="center"
         justify="center"
         css={{
@@ -44,13 +51,6 @@ import {
           p={{ base: 5, lg: 16 }}>
           <Box>
             <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
-              <Heading
-                fontSize={{
-                  base: '4xl',
-                  md: '5xl',
-                }}>
-                Contact Panaverse              </Heading>
-  
               <Stack
                 spacing={{ base: 4, md: 8, lg: 20 }}
                 direction={{ base: 'column', md: 'row' }}>
@@ -179,5 +179,8 @@ import {
           </Box>
         </Box>
       </Flex>
+      </Box>
+      </Stack>
+      </>
     )
   }
