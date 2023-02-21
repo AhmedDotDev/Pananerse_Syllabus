@@ -52,7 +52,7 @@ export default function SimpleThreeColumns() {
           title={'Quarter I (Core)'}
           text={
             'Learn the fundamentals of Object-Oriented programming using JavaScript and TypeScript and the latest Web trends i.e. Web 3.0 and Metaverse concepts and try to understand their working from the perspective of the users. '}
-               learn='../Core/quater1'
+               learn='./core-courses/q1'
         />
         </Box>
         <Box
