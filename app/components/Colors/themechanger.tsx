@@ -11,4 +11,7 @@ export function headingColorChanger () {
 export function paraColorChanger () {
     const colorchanger = useColorModeValue('gray.100','gray.200' );     return colorchanger;
 }
+export function paraColorChanger2 () {
+    const colorchanger = useColorModeValue('#ae1028','gray.200' );     return colorchanger;
+}
  

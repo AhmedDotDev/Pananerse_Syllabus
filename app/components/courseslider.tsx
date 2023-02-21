@@ -65,7 +65,7 @@ export default function Example() {
 {
   coursedata.map((c)=>{
 return (
-  <CourseCard title={c.title} text={c.desc} learn={"adasdasd"} img={c.img  }/>
+  <CourseCard key={c.title} title={c.title} text={c.desc} learn={"adasdasd"} img={c.img  }/>
 )
   })
 }

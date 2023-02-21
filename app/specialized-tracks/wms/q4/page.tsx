@@ -10,7 +10,7 @@ import { BottomNavigation, BottomNavigationIcon, BottomNavigationItem, BottomNav
 
 
 
-export default function quarterOne() {
+export default function WMSquarterFour() {
   return (
     <>
         <BottomNav quarter_four="./specialized-tracks/wms/q4" quarter_five="./specialized-tracks/wms/q4"></BottomNav>

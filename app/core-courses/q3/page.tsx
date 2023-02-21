@@ -7,16 +7,17 @@ import Nav from "@/app/components/header";
 import { SearchIcon } from "@chakra-ui/icons";
 import { Box, Stack, VStack,Text,Image} from "@chakra-ui/react";
 import { BottomNavigation, BottomNavigationIcon, BottomNavigationItem, BottomNavigationLabel } from "chakra-ui-bottom-navigation";
+import { useRouter } from "next/navigation";
+import { useCallback, useState } from "react";
 
 
-
-export default function quarterOne() {
+export default function quarterThree() {
   return (
     <>
-        <BottomNav quarter_four="./specialized-tracks/wms/q4" quarter_five="./specialized-tracks/wms/q4"></BottomNav>
-
+    <BottomNav quarter_four="./specialized-tracks/wms/q4" quarter_five="./specialized-tracks/wms/q4"></BottomNav>
     <Nav></Nav>
-    <CourseTop coursetype="Core Track" coursedesc="Every participant of the program will cover the following 3 quarters" coursetitle="Common In All Specializations"></CourseTop>
+    
+    <CourseTop coursetype="Core Track" coursedesc="Every participant of the program will cover the following 3 quarters" coursetitle="Q2"></CourseTop>
     <Stack direction={['column', 'row']} spacing='24px' px={"12"} py="20"> 
   <Box w={["100%","100%","80%"]}>
     <Stack>

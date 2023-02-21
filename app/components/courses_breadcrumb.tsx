@@ -44,7 +44,10 @@ import { headingColorChanger, paraColorChanger } from './Colors/themechanger';
             <Stack direction={'row'}>
             <Button
             mt={"10"}
-            bg={'#BC0C29'}
+            bg={'red.600'}
+            
+            shadow="md"
+            // border={"1px #fff solid"}
             maxW={'fit-content'}
             fontWeight={200}
             rounded={'full'}
@@ -52,7 +55,7 @@ import { headingColorChanger, paraColorChanger } from './Colors/themechanger';
             onClick={() => router.push('./courses')}
             _hover={{ bg: 'gray.200', color: 'black' }}>
 
-            Explore Courses
+            Enroll Now
           </Button>
           
             </Stack>
