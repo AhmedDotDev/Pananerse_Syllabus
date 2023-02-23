@@ -1,3 +1,4 @@
+'use client'
 import { Box , Flex, Heading, SimpleGrid, Stat, StatLabel, StatNumber, Text, useColorModeValue} from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { BsFillPeopleFill } from "react-icons/bs";

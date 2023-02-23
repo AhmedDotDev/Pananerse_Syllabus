@@ -23,7 +23,7 @@ const CourseCard = ({ title, text , learn,img}: CourseCardProps) => {
     </Box>
   );
 };
-export default function Example() {
+export default function CoursesSlider() {
   const coursedata=[
     {
       title:"Web 3.0 (Blockchain) and Metaverse Specialization",

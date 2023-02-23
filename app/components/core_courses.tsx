@@ -36,7 +36,7 @@ const Feature = ({ title, text, icon , learn}: FeatureProps) => {
   );
 };
 
-export default function SimpleThreeColumns() {
+export default function CoreCourses() {
   return (
     <>
     <Container marginTop={20} marginBottom={20} maxW={'100%'} py={12} px={12}>
@@ -66,7 +66,7 @@ export default function SimpleThreeColumns() {
           text={
             'Develop customer-facing planet-scale Websites, Full-Stack Apps and templates, Dashboards, and Muti-Cloud Serverless APIs. By the end of the quarter, you will be able to develop and deploy web platforms like Facebook, Shopify, etc.'
           }
-          learn='../Core/quater2'
+          learn='./core-courses/q2'
 
         />
         </Box>
@@ -81,7 +81,7 @@ export default function SimpleThreeColumns() {
           text={
             '$-101: Dollar Making Bootcamp - You will be assigned to build a template which we will sell on Theme Forest and Panaverse DAO marketplace. The Panaverse DAO will receive 25% share on the sale of the template which will be used to manage the platform'
           }
-          learn='../Core/quater3'
+          learn='./core-courses/q3'
 
         />
         

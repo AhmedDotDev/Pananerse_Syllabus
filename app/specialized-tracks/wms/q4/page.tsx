@@ -13,7 +13,7 @@ import { BottomNavigation, BottomNavigationIcon, BottomNavigationItem, BottomNav
 export default function WMSquarterFour() {
   return (
     <>
-        <BottomNav quarter_four="./specialized-tracks/wms/q4" quarter_five="./specialized-tracks/wms/q4"></BottomNav>
+        <BottomNav quarter_four="./specialized-tracks/wms/q4" quarter_five="./specialized-tracks/wms/q5"></BottomNav>
 
     <Nav></Nav>
     <CourseTop coursetype="Core Track" coursedesc="Every participant of the program will cover the following 3 quarters" coursetitle="Common In All Specializations"></CourseTop>

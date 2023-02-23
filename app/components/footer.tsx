@@ -1,3 +1,4 @@
+'use client'
 import {
     Box,
     chakra,
@@ -45,7 +46,7 @@ import {
     label,
     href,
   }: {
-    children: ReactNode;
+    children: React.ReactNode;
     label: string;
     href: string;
   }) => {

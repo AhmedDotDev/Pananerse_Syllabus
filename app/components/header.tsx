@@ -25,9 +25,10 @@ import { BackgroundChanger } from './Colors/themechanger';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 
-const Links = ['Home', 'About', 'Courses', 'Instructors', 'Contact'];
+const Links = ['Home', 'About', 'Courses',  'Contact'];
+const LinksPath = ['./', './about', './courses',  './contact'];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
+const NavLink = ({ children, path }: { children: ReactNode,path:string }) => (
   <Link
     as={NextLink}
     px={2}
@@ -37,7 +38,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
       textDecoration: 'none',
       bg: useColorModeValue('gray.200', 'gray.700'),
     }}
-    href=''
+    href={path}
   >
     {children}
   </Link>
@@ -61,6 +62,23 @@ export default function Nav() {
   }, []);
   return (
     <>
+    
+    
+    <Box
+  overflowY="auto"
+  css={{
+    '&::-webkit-scrollbar': {
+      width: '4px',
+    },
+    '&::-webkit-scrollbar-track': {
+      width: '6px',
+    },
+    '&::-webkit-scrollbar-thumb': {
+      background: "red",
+      borderRadius: '24px',
+    },
+  }}
+></Box>
       <Box w={'100%'} as='header' position={isSticky ? "fixed" : "static"}
         top={0}
         zIndex={1000} bg={useColorModeValue('white','#1A202C')} px={4}>
@@ -91,8 +109,8 @@ export default function Nav() {
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
 
-              {Links.map((link) => (
-                <NavLink key={link}>{link} </NavLink>
+              {Links.map((link, index) => (
+                <NavLink key={link} path={LinksPath[index]}>{link} </NavLink>
               ))}
             </HStack>
           </HStack>
@@ -104,7 +122,7 @@ export default function Nav() {
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
 
-              <Menu>
+              {/* <Menu>
                 <MenuButton
                   as={Button}
                   rounded={'full'}
@@ -134,15 +152,15 @@ export default function Nav() {
                   <MenuItem>Account Settings</MenuItem>
                   <MenuItem>Logout</MenuItem>
                 </MenuList>
-              </Menu>
+              </Menu> */}
             </Stack>
           </Flex>
         </Flex>
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+              {Links.map((link, index) => (
+                <NavLink key={link} path={LinksPath[index]}>{link}</NavLink>
               ))}
             </Stack>
           </Box>

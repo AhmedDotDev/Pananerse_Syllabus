@@ -1,3 +1,5 @@
+
+'use client'
 import { Box, Container, Heading,Stack,Text } from "@chakra-ui/react";
 import Link from "next/link";
 import AboutCards from "./about-Card";

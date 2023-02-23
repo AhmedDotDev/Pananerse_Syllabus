@@ -1,3 +1,5 @@
+
+'use client'
 import { ReactElement } from 'react';
 import { Box, SimpleGrid, Icon, Text, Stack, Flex, Container, Heading } from '@chakra-ui/react';
 import { FcAssistant,FcMoneyTransfer, FcIdea, FcInTransit } from 'react-icons/fc';
